@@ -6,13 +6,13 @@ Unplanaria is designed to solve the problems Planaria solves in a way that is:
 - Doesn't require spamming the p2p broadcast network with requests
 - Doesn't require digging through 99% weather data for the <1% of transactions you are interested in
 
-While it works for now, the problem with spamming from the p2p network is that the burden it places on the p2p broadcast network is the number of transactions (tx) to the power of the number of nodes `n`, or `tx^n`. This is fine when the network isn't under heavy load, but it probably won't work too well with gigabytes of data.
+While it works for now, the problem with spamming from the p2p network is that the burden it places on the p2p broadcast network is the number of transactions (tx) to the power of the number of nodes `n`, or `tx^n`. This is fine when the network isn't under heavy load, but it probably won't work too well with gigamegs of data.
 
 I propose a different solution. Let's send raw TXs directly to the apps that are consuming them, allow them to scrape the data from the outputs to store locally, and then broadcast them themselves, like so:
 
 ![](true-p2p.png)
 
-In this solution, wallets will be able to sign and send raw TXs directly to the apps that are consuming them. The apps can then filter these transactions, verify them, and decide whether or not they wish to broadcast them, and if so, at what point in the future they will do so. There are a few reasons this is a really great idea:
+In this solution, wallets will be able to sign (or not sign!) and send raw TXs directly to the apps that are consuming them. The apps can then filter these transactions, verify them, and decide whether or not they wish to broadcast them, and if so, at what point in the future they will do so. There are a few reasons this is a really great idea:
 
 - Reduces OP_RETURN abuse.
 - Gives apps the ability to moderate content, or not, up to you!
