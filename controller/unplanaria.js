@@ -2,6 +2,8 @@ const express = require('express'),
 TX = require('../models/tx'),
 config = require('../config'),
 axios = require('axios'),
+bsv = require('bsv'),
+Transaction = bsv.Transaction,
 unplanaria = express.router();
 
 //Unplanaria routes
