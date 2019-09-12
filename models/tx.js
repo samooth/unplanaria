@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 
 const txSchema = mongoose.Schema({
-    txid: {
+    hash: {
         type: String,
         required: true
     },
-    confirmed: Number,
-    body: Object,
+    raw: String,
+    object: Object,
+    sent: Boolean,
     created: Date,
     modified: Date
 });

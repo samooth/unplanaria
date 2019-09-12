@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
+    "bitcore-p2p-cash": "^8.7.0",
     "bsv": "^0.30.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.7.0"
   }
 }

@@ -12,7 +12,7 @@ module.exports = {
     channels: [{
         name: 'WhatsOnChain',
         url: 'https://api.whatsonchain.com/v1/bsv/main/tx/raw',
-        post: (x) => { return { rawtx: x }; }
+        format: (x) => { return { rawtx: x }; }
     }],
     privateKey: 'someprivatekey'
 }
