@@ -6,7 +6,7 @@ const txSchema = mongoose.Schema({
         required: true
     },
     raw: String,
-    object: Object,
+    data: Array,
     sent: Boolean,
     created: Date,
     modified: Date
