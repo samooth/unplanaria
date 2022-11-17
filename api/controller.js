@@ -2,6 +2,7 @@ TX = require('../models/tx'),
 config = require('../config'),
 axios = require('axios'),
 bsv = require('bsv'),
+bitpacket = require('bitpacket'),
 Script = bsv.Script,
 Transaction = bsv.Transaction;
 let broadcastChannel = config.channels[0];
